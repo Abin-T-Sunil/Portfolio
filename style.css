@@ -1,0 +1,565 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Beautiful font */
+  background-color: #f7f5ee; /* Slightly darker background color */
+  margin: 0;
+}
+
+.header {
+  position: fixed; /* Making the header fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #9d9a90;; /* Darker header background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Adding some padding for space */
+  z-index: 1000; /* Ensuring it's above other content */
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+/* .head_left {
+  flex: 1;} /* Occupy remaining space */
+ 
+
+.head_left p {
+  font-size: 24px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+}
+
+.head_right {
+  display: flex;
+  justify-content: space-between; /* Evenly distribute items */
+  width: 30%;
+}
+
+.head_right p {
+  margin-left: 10px; /* Adding space between links */
+  cursor: pointer; /* Showing pointer on hover */
+  
+}
+
+.head_right p a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.head_right p:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* main section */
+
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9d9a90;
+}
+
+.ccontainer {
+  width: 9.25em;
+  height: 1.15em;
+  font-size: 4rem;
+  font-family: sans-serif;
+  position: relative;
+  transition: all 0.3s ease; /* Added transition */
+}
+
+.ccontainer div {
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease; /* Added transition */
+}
+
+.upper {
+  top: 0;
+  height: 52.5%;
+  color: #fff;
+  overflow: hidden;
+  z-index: 3;
+  animation: moveUp 1.5s ease-in-out 1;
+  background-color: #9d9a90;
+  transition: all 0.3s ease; /* Added transition */
+}
+
+.lower {
+  bottom: 0;
+  height: 100%;
+  background: linear-gradient(180deg, #9d9a90 52.5%, #fff 52.5%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  z-index: 1;
+  animation: moveDown 1.5s ease-in-out 1;
+  transition: all 0.3s ease; /* Added transition */
+}
+
+.inside {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
+  text-align: center;
+  z-index: 2;
+  font-size: 1rem;
+  color: #dc143c;
+  transition: all 0.3s ease; /* Added transition */
+}
+
+/* Added hover effect */
+.ccontainer:hover .upper {
+  animation: moveUpHover 1.5s ease-in-out 1;
+}
+
+.ccontainer:hover .lower {
+  animation: moveDownHover 1.5s ease-in-out 1;
+}
+
+/* Additional keyframes for hover animation */
+@keyframes moveUpHover {
+  0%,
+  100% {
+    top: 0;
+  }
+
+  50%,
+  70% {
+    top: -45px;
+  }
+}
+
+@keyframes moveDownHover {
+  0%,
+  100% {
+    top: 0;
+  }
+
+  50%,
+  70% {
+    top: 30px;
+  }
+}
+
+@media (max-width: 424px) {
+  .ccontainer {
+    font-size: 2.5rem;
+  }
+
+  .inside {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .ccontainer {
+    font-size: 2rem;
+  }
+
+  .inside {
+    font-size: 0.5rem;
+  }
+}
+
+
+/* About section */
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 70vh;
+}
+
+.about_section{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.about_heading{
+  display:flex;
+  align-items: center;
+     width: 100%;
+    order:2;
+}
+
+.about_heading h1{
+  
+  font-family: Big Shoulders Stencil Display,cursive;
+    font-size: 30px;
+}
+
+.about_line{
+  margin: 27px;
+  flex: 1;
+  height: 1px;
+  background-color: black;
+}
+
+.about_1{
+ display: block; 
+  order:1;
+}
+
+.about_body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* .about_body_photo{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.about_photo{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about_photo img{
+  position: absolute;
+  border-radius: 100px;
+  border: 1px solid #9d9a90;
+  background-color: #9d9a90;
+  max-width: 300px;
+  max-height: 300px;
+  top:0px;
+  right: 15em;
+}
+
+.about_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_content p{
+  line-height: 1.5em;
+    margin-top: 30px;
+    text-indent: 30px;
+    margin-right: 20px;
+}
+ /* about end */
+
+ /* volunteering section */
+
+ .volunteering{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 80vh;
+}
+
+.volunteering_section{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.volunteering_heading{
+  display:flex;
+  align-items: center;
+     width: 100%;
+    order:1;
+    margin-left: 15px;
+}
+
+.volunteering_heading h1{
+  
+  font-family: Big Shoulders Stencil Display,cursive;
+    font-size: 30px;
+}
+
+.volunteering_line{
+  margin: 27px;
+  flex: 1;
+  height: 1px;
+  background-color: black;
+}
+
+.volunteering_1{
+ display: block; 
+  order:2;
+}
+
+.volunteering_body {
+  display: flex;
+  justify-content: center; /* Center the boxes horizontally */
+  align-items: center; /* Center the boxes vertically */
+  gap: 30px; /* Adjust spacing between boxes */
+  margin-top: 8em; /* Add top margin */
+}
+
+/* Existing styles remain unchanged */
+   
+.volunteering_box {
+  position: relative;
+  border: 2px solid #9d9a90;
+  height: 250px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  transition: transform 0.6s ease, background-color 0.3s ease;
+  cursor: pointer; 
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.volunteering_box .hidden-text,
+.volunteering_box .visible-text {
+  position: absolute;
+  backface-visibility: hidden;
+  visibility: hidden;
+  transition: visibility 0.6s ease;
+}
+
+.volunteering_box:hover .hidden-text {
+  visibility: hidden;
+}
+
+.volunteering_box .visible-text {
+  visibility: hidden;
+  transform: rotateY(180deg); 
+}
+
+.volunteering_box:hover .visible-text {
+  visibility: visible;
+  transform: rotateY(0); 
+  transform: scaleX(-1);
+
+}
+
+.volunteering_box:hover {
+  transform: rotateY(180deg);
+  background-color: #9d9a90;
+}
+
+
+.volunteering_box:not(:hover) .hidden-text {
+  visibility: visible;
+} 
+
+/* volunteering ends */
+
+/* skills section */
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 50vh;
+}
+
+.skills_section{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.skills_heading{
+  display:flex;
+  align-items: center;
+     width: 100%;
+    order:2;
+}
+
+.skills_heading h1{
+  
+  font-family: Big Shoulders Stencil Display,cursive;
+    font-size: 30px;
+}
+
+.skills_line{
+  margin: 27px;
+  flex: 1;
+  height: 1px;
+  background-color: black;
+}
+
+.skills_1{
+ display: block; 
+  order:1;
+}
+
+.skills_body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.skills_icon{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+ column-gap: 5em;
+ margin-top: 7em;
+ 
+}
+
+/* skills end */
+
+/* contact section */
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 50vh;
+}
+
+.contact_section{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.contact_heading{
+  display:flex;
+  align-items: center;
+     width: 100%;
+    order:2;
+}
+
+.contact_heading h1{
+  
+  font-family: Big Shoulders Stencil Display,cursive;
+    font-size: 30px;
+   
+}
+
+.contact_line{
+  margin: 27px;
+  flex: 1;
+  height: 1px;
+  background-color: black;
+}
+
+.contact_1{
+ display: block; 
+  order:1;
+  height: 1px;
+  background-color: black;
+  margin-top: 27px;
+  margin-left:2em;
+  margin-right: 2em;
+}
+
+.contact-info{
+ margin-top: 2em;
+ margin-left: 7em;
+ font-weight: 500;
+ font-size: 1.5em;
+}
+
+.contact_email {
+  text-decoration: none;
+  color: black;
+}
+
+.contact_or{
+  text-align: center;
+  line-height: 4em;
+}
+
+.social-icons{
+ text-align: center;
+ margin-top: 10px;
+ cursor: pointer;
+}
+
+/* responsive */
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .head_left {
+    margin-bottom: 10px;
+  }
+
+  .head_right {
+    width: 100%;
+  }
+
+  .head_right p {
+    margin-bottom: 10px;
+  }
+
+  
+}
+
+/* about */
+
+@media (max-width: 767px) {
+  .about_body{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .about{
+    height: 90vh;
+  }
+
+  .about_photo img{
+    margin-top: 10px;
+    position: static;
+  }
+
+
+  /* volunteering */
+  .volunteering_body{
+   flex-direction: column;
+  }
+
+  /* skills */
+  /* For mobile view */
+
+  
+  .skills{
+    margin-top: 20em;
+    height: 30vh;
+  }
+
+  .skills_icon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+/* contact */
+
+.contact-info{
+  margin-right: 5em;
+}
+}
